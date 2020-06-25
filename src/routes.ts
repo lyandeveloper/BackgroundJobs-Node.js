@@ -1,8 +1,9 @@
  import {Router} from 'express';
+import 'dotenv/config';
 import UserController from './app/controllers/UserController';
 
- const routes = Router();
+const routes = Router();
 
- routes.get('/users', UserController.store);
+routes.post('/users', UserController.store);
 
- export default routes;
+export default routes;
