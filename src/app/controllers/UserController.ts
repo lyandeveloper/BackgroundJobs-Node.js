@@ -1,5 +1,4 @@
-import { Request, Response } from 'express';
-import Mail from '../lib/Mailer';
+import { Request, Response } from 'express'; 
 
 class User {
   async store(req: Request, res: Response) : Promise<Response>{
@@ -10,12 +9,6 @@ class User {
       email,
       password
     }
-
-    Mail.from = 'Queue Test <queue@queuetest.com.br>';
-    Mail.to = `${name} <${email}>`;
-    Mail.subject = 'Cadastro de usuário';
-    Mail.message = `Olá, ${name}, bem-vindo ao sistema de filas ;)`;
-    Mail.sendMail();
 
     return res.json(user);
   }
