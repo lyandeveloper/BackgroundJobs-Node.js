@@ -1,4 +1,4 @@
-import { Request, Response } from 'express'; 
+import { Request, Response } from 'express';  
 import Queue from '../lib/Queue';
 
 class User {
@@ -10,7 +10,7 @@ class User {
       email,
       password
     }
-
+    
     await Queue.add({ user })
 
     return res.json(user);

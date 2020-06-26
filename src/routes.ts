@@ -1,5 +1,5 @@
- import {Router} from 'express';
 import 'dotenv/config';
+import {Router} from 'express';
 import UserController from './app/controllers/UserController';
 
 const routes = Router();
